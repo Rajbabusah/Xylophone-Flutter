@@ -19,7 +19,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Xylophone-App',
+      title: 'Xylophone-Apps',
       home: Scaffold(
         body: SafeArea(
           child: Column(
