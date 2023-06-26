@@ -14,13 +14,19 @@ class XylophoneApp extends StatefulWidget {
 }
 
 class _XylophoneAppState extends State<XylophoneApp> {
+  void playSound(int soundNumber){
+    final player = AudioCache();
+    player.play('assets_note$soundNumber.mp3');
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Xylophone-Apps',
+
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
             children: [
@@ -30,8 +36,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                     color: Colors.red,
                   ),
                   onPressed: () {
-                final player = AudioCache();
-                player.play('assets_note1.mp3');
+                   playSound(1);
                   },
                 ),
               ),
@@ -41,8 +46,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                     color: Colors.green,
                   ),
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note2.mp3');
+                    playSound(2);
                   },
                 ),
               ),
@@ -52,8 +56,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                     color: Colors.teal,
                   ),
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note3.mp3');
+                    playSound(3);
                   },
                 ),
               ),
@@ -63,8 +66,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                     color: Colors.teal.shade900,
                   ),
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note4.mp3');
+                    playSound(4);
                   },
                 ),
               ),
@@ -74,8 +76,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                     color: Colors.orange ,
                   ),
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note5.mp3');
+                    playSound(5);
                   },
                 ),
               ),
@@ -85,8 +86,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                     color: Colors.blue,
                   ),
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note6.mp3');
+                    playSound(6);
                   },
                 ),
               ),
@@ -96,8 +96,7 @@ class _XylophoneAppState extends State<XylophoneApp> {
                     color: Colors.blueGrey,
                   ),
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play('assets_note7.mp3');
+                    playSound(7);
                   },
                 ),
               ),
